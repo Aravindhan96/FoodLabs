@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="JS/main.js"></script>
+        <style>
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 110px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+        }
+    
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 110px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 110px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+        }
+      
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 110px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+        }
+        </style>
+    </head>
+<body>
+    <div data-role="page" id="faq">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="return-icon float-left">
+                <a href="account.html"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>FAQ</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div>
+                <h4 class="m-0">All Topics</h4>
+            </div>
+            <a href="#select-order">
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Help with an order<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+            </a> 
+            <div class="grey-order" style="margin-bottom: 20px;">
+                <h3>Account and Payment Options<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+            </div> 
+            <a href="#guide-to-foodlabs">
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Guide to Food Labs<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div> 
+            </a>
+            <a href="#feedback">
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Feedback<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+            </a>          
+        </div>
+    </div> 
+    <div data-role="page" id="select-order">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-block-a return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Select an order</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <a href="#dioni-delight-01">
+                <div class="select-order-tiles">
+                    <div class="ui-grid-a my-breakpoint account-option-col">
+                        <div class="ui-block-a">
+                            <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                        </div>
+                        <div class="ui-block-b select-order-details">
+                            <p class="select-order-01">Dioni's Delight</p>
+                            <p class="select-order-02">13 November, 9:41am</p>
+                            <p class="select-order-02">Order Completed</p>
+                        </div>
+                    </div>
+                    <div class="select-order-sub-details">
+                        <p class="select-order-03">2 x Honey Pancakes</p>
+                        <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg" class="rating float-right"></p>
+                        <p class="select-order-03" style="color: black!important;">Total <a class="total-out float-right" style="color: #FD5800;">LKR 1100</a></p>
+                    </div>                
+                </div> 
+            </a>
+            <div class="select-order-tiles">
+                <div class="ui-grid-a my-breakpoint account-option-col">
+                    <div class="ui-block-a">
+                        <img class="select-order-image" src="assets/images/meraki-by-asi.png" alt="restaurant">
+                    </div>
+                    <div class="ui-block-b select-order-details">
+                        <p class="select-order-01">Meraki by Asi</p>
+                        <p class="select-order-02">10 November, 12:00pm</p>
+                        <p class="select-order-02">Order Completed</p>
+                    </div>
+                </div>
+                <div class="select-order-sub-details">
+                    <p class="select-order-03">2 x Chocolate Milkshake</p>
+                    <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg" class="rating float-right"></p>
+                    <p class="select-order-03">Total <a class="total-out float-right" style="color: #FD5800;">LKR 520</a></p>
+                </div>                
+            </div> 
+            <div class="select-order-tiles">
+                <div class="ui-grid-a my-breakpoint account-option-col">
+                    <div class="ui-block-a">
+                        <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                    </div>
+                    <div class="ui-block-b select-order-details">
+                        <p class="select-order-01">Dioni's Delight</p>
+                        <p class="select-order-02">19 October, 4:00pm</p>
+                        <p class="select-order-02">Order Completed</p>
+                    </div>
+                </div>
+                <div class="select-order-sub-details">
+                    <p class="select-order-03">2 x Chocolate Chip Cookies</p>
+                    <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg" class="rating float-right"></p>
+                    <p class="select-order-03">Total <a class="total-out float-right" style="color: #FD5800;">LKR 580</a></p>
+                </div>                
+            </div>        
+        </div>
+    </div>
+    <div data-role="page" id="dioni-delight-01">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-block-a return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Select an issue</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div class="select-order-tiles-02">
+                <div class="ui-grid-a my-breakpoint account-option-col">
+                    <div class="ui-block-a">
+                        <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                    </div>
+                    <div class="ui-block-b select-order-details">
+                        <p class="select-order-01">Dioni's Delight</p>
+                        <p class="select-order-02">13 November, 9:41am</p>
+                        <p class="select-order-02">Order Completed</p>
+                    </div>
+                </div>              
+            </div>    
+            <div>
+                <div>
+                    <h4>Help with an order</h4>
+                </div>
+                <a href="#dioni-delight-01-order-issue">
+                    <div class="grey-order" style="margin-bottom: 20px;">
+                        <h3>Issue with a delivered or past order<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                    </div>
+                </a> 
+                <a href="#dioni-delight-01-safety-issue">
+                    <div class="grey-order" style="margin-bottom: 20px;">
+                        <h3>Safety Issue<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                    </div>  
+                </a> 
+            </div> 
+        </div>
+    </div> 
+    <div data-role="page" id="dioni-delight-01-order-issue">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-block-a return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Select an issue</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div class="select-order-tiles-02">
+                <div class="ui-grid-a my-breakpoint account-option-col">
+                    <div class="ui-block-a">
+                        <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                    </div>
+                    <div class="ui-block-b select-order-details">
+                        <p class="select-order-01">Dioni's Delight</p>
+                        <p class="select-order-02">13 November, 9:41am</p>
+                        <p class="select-order-02">Order Completed</p>
+                    </div>
+                </div>              
+            </div>    
+            <div>
+                <div>
+                    <h4>Issue with a delivered or past order</h4>
+                </div>
+                <a href="#">
+                    <div class="grey-order" style="margin-bottom: 20px;">
+                        <h3>My order was damaged<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                    </div>
+                </a> 
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Wrong or missing items<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Change payment partner<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>I had an issue with my delivery partner<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Order never arrived<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Change tip<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>   
+            </div> 
+        </div>
+    </div> 
+    <div data-role="page" id="dioni-delight-01-safety-issue">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-block-a return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Select an issue</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div class="select-order-tiles-02">
+                <div class="ui-grid-a my-breakpoint account-option-col">
+                    <div class="ui-block-a">
+                        <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                    </div>
+                    <div class="ui-block-b select-order-details">
+                        <p class="select-order-01">Dioni's Delight</p>
+                        <p class="select-order-02">13 November, 9:41am</p>
+                        <p class="select-order-02">Order Completed</p>
+                    </div>
+                </div>              
+            </div>    
+            <div>
+                <div>
+                    <h4>Safety Issue</h4>
+                </div>
+                <a href="#">
+                    <div class="grey-order" style="margin-bottom: 20px;">
+                        <h3>I had food safety issues with my order<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                    </div>
+                </a> 
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Delivery person didn't match the picture<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Delivery person in different vehicle<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+                <div class="grey-order" style="margin-bottom: 20px;">
+                    <h3>Report a safety incident involving a delivery person<img src="/assets/icons/left-arrow.svg" style="float: right;" alt=""></h3>
+                </div>
+            </div> 
+        </div>
+    </div> 
+    <div data-role="page" id="guide-to-foodlabs">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-block-a return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Guide to Foodlabs</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div>
+                <h4 class="m-0">Video Guide on how to use the app</h4>
+            </div>
+            <div class="video-container">
+                <iframe width="100%" 
+                src="https://www.youtube.com/embed/Szpr7XYSXZM">
+            </iframe>
+            </div>        
+        </div>
+    </div> 
+    <div data-role="page" id="feedback">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-block-a return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Feedback</h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div>
+                <h4 class="m-0">Please give in your feedbacks</h4>
+            </div>
+            <input type="text" class="feedback-container">
+            <div>
+                <a href="#">
+                    <div class="button-container">
+                        <button class="button-active-2">
+                            Send Feedback
+                        </button>
+                    </div>
+                </a>
+            </div>      
+        </div>
+    </div> 
+</body>
+</html>

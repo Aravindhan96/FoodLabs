@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/main.js"></script>
+    <style>
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 590px;
+                height: 400px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 375px;
+                height: 360px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 900px;
+                height: 550px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 400px;
+                height: 450px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 812px;
+                height: 400px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 812px;
+                height: 400px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 1024px;
+                height: 500px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 400px;
+                height: 468px;
+            }
+        }
+    </style>
+</head>
+box-shadow: 0 0 12px rgba(0,0,0,.6);
+
+<body>
+    <div data-role="page" id="honeypancakes">
+        <div data-role="main" class="main">
+            <div class="ui-grid-a my-breakpoint center-alignment">
+                <div class="ui-block-a">
+                    <div class="item-image pancake">
+                        
+                    </div>
+                    <div style="position: relative; top: -30px;">
+                        <div class="quantity">
+                            <div style="border-radius: 30px;display: inline-flex;box-shadow: 0 0 12px rgba(0,0,0,.6);">
+                                <a href="#" class="quantity__minus"><span
+                                        style="font-size: 30px; font-family: 'Poppins';">-</span></a>
+                                <input name="quantity" type="text" class="quantity__input m-0" id="itemQuantity" value="0">
+                                <a href="#" class="quantity__plus"><span
+                                        style="font-size: 30px; font-family: 'Poppins';">+</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            const minus = $('.quantity__minus');
+                            const plus = $('.quantity__plus');
+                            const input = $('.quantity__input');
+                            minus.click(function (e) {
+                                e.preventDefault();
+                                var value = input.val();
+                                if (value > 1) {
+                                    value--;
+                                    if (value <= 0){
+                                        document.getElementById("addToCart").disabled = true;
+                                    }
+                                }
+                                input.val(value);
+                            });
+
+                            plus.click(function (e) {
+                                e.preventDefault();
+                                var value = input.val();
+                                value++;
+                                input.val(value);
+                                document.getElementById("addToCart").disabled = false;
+                            })
+                        });
+                    </script>
+                </div>
+                <div class="ui-block-b">
+                    <div class="back-arrow-icon float-left" style="top: 20px;">
+                        <a type="button" href="home-2.html"><img src="/assets/icons/back-arrow.svg"
+                                class="back-arrow-icon" alt=""></a>
+                    </div>
+                    <div class="item-order-area">
+                        <p>
+                            <span class="food-item-name" id="itemName">Honey Pancakes</span>
+                            <span class="float-right">
+                                <span onclick="addFavourite()"><img src="/assets/icons/heart-orange.svg" alt=""></span>
+                                <span class="rating-text"><img class="rating-star" src="/assets/icons/star.svg"
+                                        alt="">5.0</span>
+                            </span>
+                        </p>
+                        <p class="ingrediants-title">Ingrediants</p>
+                        <p class="ingrediants-list">Flour, Sugar, Baking Powder, Cinnamon, Salt, Milk, Egg, Vanilla
+                            Extract, Butter & Honey</p>
+                        <p>
+                            <span class="grams-number">200</span>
+                            <span class="grams-title">grams</span>
+                        </p>
+                        <p>
+                            <span class="price-text" >LKR </span><span class="price-text" id="itemPrice">550</span>
+                            <span class="per-item-text">per item</span>
+                            <span class="float-right">
+                                <span class="discount-text">Discount</span>
+                                <span class="percent-text" id="itemDiscount">30%</span>
+                            </span>
+                        </p>
+                        <a href="#reviews">
+                            <p class="read-reviews">Read Reviews</p>
+                        </a>
+                    </div>
+                    <div>
+                           <div class="center-alignment">
+                                <a href="#honeypancakesaddtochart" data-transition="none">
+                                    <button id="addToCart" disabled class="button-active-2" style="margin-left: -167px;">
+                                        Add to Cart
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-role="page" id="honeypancakesaddtochart">
+        <div data-role="main" class="main">
+            <div class="ui-grid-a my-breakpoint center-alignment">
+                <div class="ui-block-a">
+                    <div class="item-image pancake">
+    
+                    </div>
+                    <div style="position: relative; top: -30px;">
+                        <div class="quantity">
+                            <div style="border-radius: 30px;display: inline-flex;box-shadow: 0 0 12px rgba(0,0,0,.6);">
+                                <a href="#" class="quantity__minus"><span
+                                        style="font-size: 30px; font-family: 'Poppins';">-</span></a>
+                                <input name="quantity" type="text" class="quantity__input m-0" value="0">
+                                <a href="#" class="quantity__plus"><span
+                                        style="font-size: 30px; font-family: 'Poppins';">+</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            const minus = $('.quantity__minus');
+                            const plus = $('.quantity__plus');
+                            const input = $('.quantity__input');
+                            minus.click(function (e) {
+                                e.preventDefault();
+                                var value = input.val();
+                                if (value > 1) {
+                                    value-1;
+                                }
+                                input.val(value);
+                            });
+
+                            plus.click(function (e) {
+                                e.preventDefault();
+                                var value = input.val();
+                                value+1;
+                                input.val(value);
+                            })
+                        });
+                    </script>
+                </div>
+                <div class="ui-block-b">
+                    <div class="back-arrow-icon float-left" style="top: 20px;">
+                        <a type="button" href="home-2.html"><img src="/assets/icons/back-arrow.svg"
+                                class="back-arrow-icon" alt=""></a>
+                    </div>
+                    <div class="item-order-area">
+                        <p>
+                            <span class="food-item-name">Honey Pancakes</span>
+                            <span class="float-right">
+                                <span><img src="/assets/icons/non-fav-heart.svg" alt=""></span>
+                                <span class="rating-text"><img class="rating-star" src="/assets/icons/star.svg"
+                                        alt="">5.0</span>
+                            </span>
+                        </p>
+                        <p class="ingrediants-title">Ingrediants</p>
+                        <p class="ingrediants-list">Flour, Sugar, Baking Powder, Cinnamon, Salt, Milk, Egg, Vanilla
+                            Extract, Butter & Honey</p>
+                        <p>
+                            <span class="grams-number">200</span>
+                            <span class="grams-title">grams</span>
+                        </p>
+                        <p>
+                            <span class="price-text">LKR 550.00</span>
+                            <span class="per-item-text">per item</span>
+                            <span class="float-right">
+                                <span class="discount-text">Discount</span>
+                                <span class="percent-text">30%</span>
+                            </span>
+                        </p>
+                        <a href="#reviews">
+                            <p class="read-reviews">Read Reviews</p>
+                        </a>
+                    </div>
+
+
+                    <div class="center-alignment">
+                        <a href="mycart.html">
+                            <button onclick="addedtoCart()" class="button-active-2" style="margin-left: -167px;"><img
+                                    src="/assets/icons/check.svg"
+                                    style="margin-left: -20px; margin-right: 5px; height: 15px; margin-bottom: -3px;"
+                                    alt="">
+                                Add to Cart
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="reviews">
+        <div class="container">
+            <div role="dialog" class="review-popup ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">
+                    <div class="review-tiles">
+                        <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg"
+                                class="rating float-right"></p>
+                        <p class="select-order-03 p-0">Comments <a id="comment" style="color: #fd5800;" class="float-right"></a></p>
+                    </div>
+                    <!-- <div class="review-tiles">
+                        <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg"
+                                class="rating float-right"></p>
+                        <p class="select-order-03 p-0">Comments <span class="float-right">Wonderful Taste</span></p>
+                    </div> -->
+                    
+                    <a data-rel="back" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Okay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = ReadReview()
+</script>
+</html>

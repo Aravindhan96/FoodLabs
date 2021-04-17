@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="JS/main.js"></script>
+        <style>
+
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 295px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+    
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 655px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 715px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+      
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 915px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+        </style>
+    </head>
+    <body>
+        <div data-role="page" id="page1">
+            <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+                <div>
+                    <h2>My Orders</h2>
+                </div>
+            </div>
+            <div role="main" class="ui-content">
+                <div data-role="tabs">
+                  <div data-role="navbar">
+                    <ul>
+                      <li class="center-alignment"><a href="#past-orders" class="ui-btn-active">Past Orders</a></li>
+                      <li class="center-alignment"><a href="#upcoming">Upcoming</a></li>
+                    </ul>
+                  </div>
+                  <div id="past-orders">
+                    <div style="padding: 20px 0;">
+                        <div class="order-tiles">
+                            <div class="ui-grid-a my-breakpoint account-option-col">
+                                <div class="ui-block-a" style="width: 35%!important;">
+                                    <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                                </div>
+                                <div class="ui-block-b select-order-details" style="width: 65%!important;">
+                                    <p class="select-order-01">Dioni's Delight</p>
+                                    <p class="select-order-02">13 November, 9:41am</p>
+                                    <p class="select-order-02">Order Completed</p>
+                                </div>
+                            </div>
+                            <div class="select-order-sub-details">
+                                <p class="select-order-03">2 x Chocolate Chip Cookies</p>
+                                <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg" class="rating float-right"></p>
+                                <p class="select-order-03">Total <span class="total-out float-right">LKR 600</span></p>
+                                <p style="display: flex; margin: 0px;">
+                                    <button class="order-btn">View Reciept</button> 
+                                    <button class="order-btn">Get Help</button> 
+                                </p>
+                            </div>               
+                        </div>
+                        <div class="order-tiles">
+                            <div class="ui-grid-a my-breakpoint account-option-col">
+                                <div class="ui-block-a" style="width: 35%!important;">
+                                    <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                                </div>
+                                <div class="ui-block-b select-order-details" style="width: 65%!important;">
+                                    <p class="select-order-01">Dioni's Delight</p>
+                                    <p class="select-order-02">13 November, 9:41am</p>
+                                    <p class="select-order-02">Order Completed</p>
+                                </div>
+                            </div>
+                            <div class="select-order-sub-details">
+                                <p class="select-order-03">2 x Chocolate Milkshake</p>
+                                <p class="select-order-03">Rating <img src="/assets/icons/5-star-rating.svg" class="rating float-right"></p>
+                                <p class="select-order-03">Total <span class="total-out float-right">LKR 1000</span></p>
+                                <p style="display: flex; margin: 0px;">
+                                    <button class="order-btn">View Reciept</button> 
+                                    <button class="order-btn">Get Help</button> 
+                                </p>
+                            </div>               
+                        </div>
+                    </div>
+                </div>
+                <div id="upcoming">
+                    <div style="padding: 20px 0;">
+                        <div class="order-tiles">
+                            <div class="ui-grid-a my-breakpoint account-option-col">
+                                <div class="ui-block-a" style="width: 35%!important;">
+                                    <img class="select-order-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                                </div>
+                                <div class="ui-block-b select-order-details" style="width: 65%!important;">
+                                    <p class="select-order-01">Dioni's Delight</p>
+                                    <p class="select-order-02">13 November, 9:41am</p>
+                                    <p class="select-order-02">Order Completed</p>
+                                </div>
+                            </div>
+                            <div class="select-order-sub-details">
+                                <p class="select-order-03">2 x Honey Pancakes</p>
+                                <p class="select-order-03">Payment Method <span class="total-out rating float-right">Card</span></p>
+                                <p class="select-order-03">Total <span class="total-out float-right">LKR 1100</span></p>
+                                <p style="display: flex; margin: 0px;">
+                                    <button class="order-btn">View Order</button> 
+                                    <button class="order-btn">Get Help</button> 
+                                </p>
+                            </div>               
+                        </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <div data-role="footer" data-position="fixed" class="ui-content p-0">
+                <div data-role="navbar" data-grid="d" class="navbar">
+                    <ul>
+                        <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a></li>
+                        <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon" alt=""><br>Search</a></li>
+                        <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a></li>
+                        <li><a href="orders.html" class="ui-button-active"><img src="/assets/icons/order-orange.svg" class="navbar-icon" alt=""><br>Order</a></li>
+                        <li><a href="account.html"><img src="/assets/icons/account-grey.svg" class="navbar-icon" alt=""><br>Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>

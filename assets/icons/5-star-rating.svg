@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="136.469" height="28.466" viewBox="0 0 136.469 28.466">
+  <defs>
+    <filter id="star" x="108.045" y="0" width="28.425" height="28.466" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="star-2" x="81.033" y="0" width="28.425" height="28.466" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="star-3" x="54.022" y="0" width="28.425" height="28.466" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-3"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="star-4" x="27.011" y="0" width="28.425" height="28.466" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-4"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="star-5" x="0" y="0" width="28.425" height="28.466" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-5"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1715" data-name="Group 1715" transform="translate(5.537 5.677)">
+    <g transform="matrix(1, 0, 0, 1, -5.54, -5.68)" filter="url(#star)">
+      <path id="star-6" data-name="star" d="M8.675,1.318l2.68,5.712,5.994.916-4.338,4.446,1.024,6.279L8.675,15.707,3.314,18.671l1.024-6.279L0,7.947,5.994,7.03Z" transform="translate(113.58 4.36)" fill="#fc0" stroke="#fc0" stroke-width="1"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5.54, -5.68)" filter="url(#star-2)">
+      <path id="star-7" data-name="star" d="M8.675,1.318l2.68,5.712,5.994.916-4.338,4.446,1.024,6.279L8.675,15.707,3.314,18.671l1.024-6.279L0,7.947,5.994,7.03Z" transform="translate(86.57 4.36)" fill="#fc0" stroke="#fc0" stroke-width="1"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5.54, -5.68)" filter="url(#star-3)">
+      <path id="star-8" data-name="star" d="M8.675,1.318l2.68,5.712,5.994.916-4.338,4.446,1.024,6.279L8.675,15.707,3.314,18.671l1.024-6.279L0,7.947,5.994,7.03Z" transform="translate(59.56 4.36)" fill="#fc0" stroke="#fc0" stroke-width="1"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5.54, -5.68)" filter="url(#star-4)">
+      <path id="star-9" data-name="star" d="M8.675,1.318l2.68,5.712,5.994.916-4.338,4.446,1.024,6.279L8.675,15.707,3.314,18.671l1.024-6.279L0,7.947,5.994,7.03Z" transform="translate(32.55 4.36)" fill="#fc0" stroke="#fc0" stroke-width="1"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -5.54, -5.68)" filter="url(#star-5)">
+      <path id="star-10" data-name="star" d="M8.675,1.318l2.68,5.712,5.994.916-4.338,4.446,1.024,6.279L8.675,15.707,3.314,18.671l1.024-6.279L0,7.947,5.994,7.03Z" transform="translate(5.54 4.36)" fill="#fc0" stroke="#fc0" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/main.js"></script>
+
+    <style>
+        @media all and (min-width: 23.4375em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 305px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 255px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 255px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 255px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="rating00" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div class="account-banner"></div>
+            <div class="oder-panel">
+                <div class="order-tiles-oder shadow1" style="margin-top: 8%;">
+                    <div>
+                        <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content"
+                            src="assets/images/dioni-delight-02.png" alt="food-item">
+                        <div style="margin: 30px ;">
+                            <p class="oder-detail"><b>Dioni's Delight</b></p>
+                            <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 style="font-size: 16px; margin-top: 20px;">Rate your experience with us!</h2>
+                    <img style="margin-top: 15px; margin-left: -30px;" class="cartimage-content"
+                        src="assets/images/honey-pancakes-main.png" alt="food-item">
+                    <div style="margin: 30px ;">
+                        <p class="oder-detail-label" style="margin-right: -10px;"><b>Honey Pancakes</b></p>
+
+                        <div>
+                            <p class="stars">
+                                <span>
+                                    <a class="star-1" href="#">1</a>
+                                    <a class="star-2" href="#">2</a>
+                                    <a class="star-3" href="#">3</a>
+                                    <a class="star-4" href="#">4</a>
+                                    <a class="star-5" href="#">5</a>
+                                </span>
+                            </p>
+                        </div>
+                        <script>
+                            $('.stars a').on('click', function () {
+                                $('.stars span, .stars a').removeClass('active');
+
+                                $(this).addClass('active');
+                                $('.stars span').addClass('active');
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="commments">
+                    <a href="#rating01" data-transition="none" class="ui-link">
+                        <div class="comment-opp-tabs">
+                            Mouth-Watering
+                        </div>
+                    </a>
+                    <a href="#" class="ui-link">
+                        <div class="comment-opp-tabs">
+                            Tasty
+                        </div>
+                    </a>
+                    <a href="#" class="ui-link">
+                        <div class="comment-opp-tabs">
+                            Lovely
+                        </div>
+                    </a>
+                    <a href="#" class="ui-link">
+                        <div class="comment-opp-tabs">Excellent</div>
+                    </a>
+                </div>
+
+                <div style="width: 300px;">
+
+                    <input style="font-size: 16px;" class="input-field" type="text" id="otherSuggestions"
+                        placeholder="Other Suggestions?" onkeyup="enableButton('otherSuggestions')">
+
+                    <div class="btn-contact-seller">
+                        <a href="#enterOTP">
+                            <button style=" width: 230px!important; margin-left: 30px;" disabled class="button-active"
+                                id="btnReview">
+                                Submit
+                            </button>
+                        </a>
+                        <a href="home.html" data-transition="slidedown">
+                            <p class="skip-link">Skip</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon"
+                                alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon"
+                                alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="rating01" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div class="account-banner"></div>
+            <div class="oder-panel">
+                <div class="order-tiles-oder shadow1" style="margin-top: 8%;">
+                    <div>
+                        <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content"
+                            src="assets/images/dioni-delight-02.png" alt="food-item">
+                        <div style="margin: 30px ;">
+                            <p class="oder-detail"><b>Dioni's Delight</b></p>
+                            <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 style="font-size: 16px; margin-top: 20px;">Rate your experience with us!</h2>
+                    <img style="margin-top: 15px; margin-left: -30px;" class="cartimage-content"
+                        src="assets/images/honey-pancakes-main.png" alt="food-item">
+                    <div style="margin: 30px ;">
+                        <p class="oder-detail-label" style="margin-right: -10px;"><b>Honey Pancakes</b></p> 
+
+                        <div>
+                            <p class="stars">
+                                <span>
+                                    <a class="star-1" href="#">1</a>
+                                    <a class="star-2" href="#">2</a>
+                                    <a class="star-3" href="#">3</a>
+                                    <a class="star-4" href="#">4</a>
+                                    <a class="star-5" href="#">5</a>
+                                </span>
+                            </p>
+                        </div>
+                        <script>
+                            $('.stars a').on('click', function () {
+                                $('.stars span, .stars a').removeClass('active');
+
+                                $(this).addClass('active');
+                                $('.stars span').addClass('active');
+                            });
+                        </script>
+
+                    </div>
+                </div>
+
+                <div class="commments">
+                    <a href="#" class="ui-link">
+                        <div class="comment-tabs">
+                            Mouth-Watering
+                        </div>
+                    </a>
+                    <a href="#" class="ui-link">
+                        <div class="comment-opp-tabs">
+                            Tasty
+                        </div>
+                    </a>
+                    <a href="#" class="ui-link">
+                        <div class="comment-opp-tabs">
+                            Lovely
+                        </div>
+                    </a>
+                    <a href="#" class="ui-link">
+                        <div class="comment-opp-tabs">Excellent</div>
+                    </a>
+                </div>
+
+                <div style="width: 300px;">
+
+                    <input style="font-size: 16px;" class="input-field" type="text" id="otherSuggestion"
+                        placeholder="Other Suggestions?" onkeyup="enableButton('otherSuggestion')">
+
+                    <div class="btn-contact-seller">
+                        <a href="#remarkConfirm" data-transition="slidedown">
+                            <button onclick="saveReview()" style=" width: 230px!important; margin-left: 30px;" class="button-active"
+                                id="btnReview">
+                                Submit
+                            </button>
+                        </a>
+                        <a href="home.html" data-transition="slidedown">
+                            <p class="skip-link">Skip</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon"
+                                alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon"
+                                alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="remarkConfirm">
+        <div class="container">
+            <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">
+                    <p class="popup-text">Rate and Review has been successfully added</p>
+                    <a href="home.html" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Okay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

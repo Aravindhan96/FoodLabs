@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+        <script src="./js/qrscan.js"></script>
+        <style>
+            @media all and (min-width: 23.4375em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 130px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+            }
+        
+            @media all and (min-width: 48em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 130px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+            }
+    
+            @media all and (min-width: 50.75em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 130px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+            }
+          
+            @media all and (min-width: 64em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 130px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 210px; }
+            }
+            </style>
+    </head>
+<body>
+    <div data-role="page" id="paymentMethods" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="return-icon float-left">
+                    <a href="account.html"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+                </div>
+                <div class="account-banner"></div>
+                <div class="account-panel">
+                    <div class="profile-picture">
+                        <img src="/assets/images/profile-picture.png" alt="">
+                    </div>
+                    <div class="back-btn float-left">
+                        <a href="account.html"><img src="/assets/icons/back-arrow.svg" class="icon-back" alt=""></a>
+                    </div>
+                    <div class="qr-btn">
+                        <a href="./qrscan.html"><img src="/assets/icons/qr-code.svg" class="qr-icon" alt=""></a>
+                    </div>
+                    <div class="account-details">
+                        <p class="account-name">Aravindhan Sathiyanathan</p>
+                        <p href="" class="rewards-points" id="lblpoints">60 Points</p>
+                    </div>
+                    <div class="account-option-section" style="margin-bottom: 90px!important;">
+                        <div class="order-points-tiles">
+                            <div class="ui-grid-a my-breakpoint">
+                                <div class="ui-block-a">
+                                    <img class="order-points-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                                </div>
+                                <div class="ui-block-b">
+                                    <p class="select-order-01">Dioni's Delight</p>
+                                    <p class="select-order-02">13 November, 9:41am</p>
+                                    <p class="order-points-01">Total <a class="total-out float-right" style="color: #fd5800;">LKR 880</a></p>
+                                    <p class="order-points-01">Points Gained <a class="total-out float-right" style="color: #fd5800;">20 Points</a></p>
+                                </div>
+                            </div>              
+                        </div> 
+                        <div class="ui-grid-a my-breakpoint">
+                            <div class="order-points-tiles">
+                                <div class="ui-block-a">
+                                    <img class="order-points-image" src="assets/images/meraki-by-asi.png" alt="restaurant">
+                                </div>
+                                <div class="ui-block-b">
+                                    <p class="select-order-01">Meraki by Asi</p>
+                                    <p class="select-order-02">10 November, 12:00am</p>
+                                    <p class="order-points-01">Total <a class="total-out float-right" style="color: #fd5800;">LKR 520</a></p>
+                                    <p class="order-points-01">Points Gained <a class="total-out float-right" style="color: #fd5800;">20 Points</a></p>
+                                </div>
+                            </div>
+                            <div class="order-points-tiles">
+                                <div class="ui-grid-a my-breakpoint">
+                                    <div class="ui-block-a">
+                                        <img class="order-points-image" src="assets/images/dioni-delight.png" alt="restaurant">
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <p class="select-order-01">Dioni's Delight</p>
+                                        <p class="select-order-02">19 October, 4:00pm</p>
+                                        <p class="order-points-01">Total <a class="total-out float-right" style="color: #fd5800;">LKR 580</a></p>
+                                        <p class="order-points-01">Points Gained <a class="total-out float-right" style="color: #fd5800;">20 Points</a></p>
+                                    </div>
+                                </div>              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a></li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon" alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a></li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon" alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg" class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</body>
+<script>
+    window.onload = updatePoints()
+</script>
+</html>

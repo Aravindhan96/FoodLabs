@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/main.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <style>
+        @media all and (min-width: 23.4375em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-c,
+            .my-breakpoint.ui-grid-c .ui-block-d {
+                width: 335px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c {
+                width: 358px;
+                padding: 0px 10px 0px 0px !important;
+            }
+
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-d {
+                width: 358px;
+                padding: 0px 0px 0px 10px !important;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c {
+                width: 386px;
+                padding: 0px 10px 0px 0px !important;
+            }
+
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-d {
+                width: 386px;
+                padding: 0px 0px 0px 10px !important;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c {
+                width: 486px;
+                padding: 0px 10px 0px 0px !important;
+            }
+
+            .my-breakpoint.ui-grid-c .ui-block-d,
+            .my-breakpoint.ui-grid-c .ui-block-b {
+                width: 486px;
+                padding: 0px 0px 0px 10px !important;
+            }
+        }
+
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 295px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 680px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 740px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 940px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div>
+                <h2>My Cart</h2>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content main">
+            <div class="ui-grid-c my-breakpoint">
+                <div class="elements" data-filter="true" data-input="#divOfPs-input">
+                    <div class="ui-block-a" id="item1">
+                        <div class="cart-tiles">
+                            <img class="cartimage-content" src="assets/images/honey-pancakes-main.png" alt="food-item">
+                            <img onclick="clearItem()" class="cross" src="assets/icons/cross-sign-orange.svg" alt="cross">
+                            <p class="oder-detail" id="itemname"><b>Honey Pancakes</b></p>
+                            <p class="oder-detail">Dioni-Delight</p>
+                            <a class="oder-detail" id="quantity">2 * </a> 
+                            <a style="margin: 0;" class="oder-detail" id="price">LKR 550</a>
+                            <p class="oder-detail" id="discount">30%</p>
+                            <p class="output-total">Total <a class="total-out" id="total">LKR 1100</a></p>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+                    <div class="ui-grid-c my-breakpoint addmorebutton">
+                        <img src="assets/icons/coupon.svg" alt=""> &nbsp;&nbsp; Add Promo Code </img>
+                        <img class="nextarrow" src="assets/icons/left-arrow.svg" alt="">
+                    </div>
+                    <hr class="divider">
+                    <div class="ui-grid-d bill">
+                        <p class="output-bill">Items Total<a class="bill-total-out" id="itemsTotal">LKR 2200</a></p>
+                        <p class="output-bill">Discount<a class="bill-total-out" id="itemsDiscount">LKR 0</a></p>
+                        <p class="output-bill">Delivery Fee<a class="bill-total-out billdeliveryfree">Free</a></p>
+                    </div>
+                    <hr class="divider">
+                    <div>
+                        <h4 class="m-0">Payment Method</h4>
+                    </div>
+                    <div class="ui-grid-e paymentMethod">
+                        <img src="assets/icons/money.svg" alt=""> &nbsp;&nbsp; Cash</img>
+                        <p class="change">Change</p>
+                    </div>
+                    <hr class="divider">
+                    <div class="ui-block-e">
+                        <div class="location">
+                            <img class="location-thumbnail" src="assets/images/location-thumbnail.png" alt="food-item">
+                            <div class="delivery-address">
+                                <p class="delivery-details"><b>Deliver to : Home</b></p>
+                                <p class="delivery-details address">30/63H,Malalasekara Mawath,</p>
+                                <p class="delivery-details address">Colombo 07</p>
+                                <p class="change-address">Change</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="ui-block-f">
+                        <div>
+                            <h4 class="m-0">Send a note to seller</h4>
+                        </div>
+                        <form>
+                                <textarea class="message" name="textarea-1" id="textarea-1"></textarea>
+                        </form>
+                    </div>
+
+                    <form id="frmPayment" name="PaymentForm" action="_self"></form>
+                    <div class="ui-block-g final-total">
+                        <!-- <p class="output-bill">Item Name<a class="bill-total-out">Pizza</a></p> -->
+                        <p class="output-bill" value="2200">Total<a class="bill-total-out" id="GrandTotal">2200</a></p>
+                        <!-- <input class="output-bill" id="item_name" name="item_name" type="text" value="Pizza"> -->
+                        <!-- <input class="output-bill" id="total_value" name="total_value" type="text" value="2200"> -->
+                    </div>
+
+                    <div class="ui-block-h ">
+                        <a href="#checkout" class="center-alignment">
+                            <button class="button-active checkout-btn" id="btnOTPtest" onclick="confirmOrder()">
+                                Checkout
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+
+                jQuery(function ($) {
+                    var $form = $('#frmPayment');
+                    var handler = StripeCheckout.configure({
+                        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+                        token: function (token) {
+                            // Use the token to create the charge with a server-side script.
+                            // You can access the token ID with `token.id`
+
+                            //This will be printed when the transaction is successful. To charge, server side scripting is required.
+                            if (token.id) {
+                                window.location.href = "#paymentConfirm"
+                                //You can also use the following code to re-submit the form content to another file for further processing.
+                                //Don't forget to add action to your form
+                                //$form.get(0).submit();
+
+                                //Or save form data locally, using local storage.
+                            }
+                        }
+                    });
+
+                    $('#btnOTPtest').on('click', function (e) {
+                        // Code Section B  Open Checkout with further options
+                        handler.open({
+                            name: 'Food Item Purchase',
+                            currency: 'LKR',
+                            description: $('#itemname').val(),
+                            amount: $('#GrandTotal').val() * 100
+                        });
+                        e.preventDefault();
+                    });
+
+                    // Code Section C  Close Checkout on page navigation
+                    $(window).on('popstate', function () {
+                        handler.close();
+                    });
+                });
+            </script>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon"
+                                alt=""><br>Home</a></li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html" class="ui-button-active"><img src="/assets/icons/cart-orange.svg"
+                                class="navbar-icon" alt=""><br>Cart</a></li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html"><img src="/assets/icons/account-grey.svg" class="navbar-icon"
+                                alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="paymentConfirm">
+        <div class="container">
+            <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">
+                    <p class="popup-text">Your Payment Was Successful!</p>
+                    <a href="orderAccept.html" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Okay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = loadCart()
+</script>
+</html>

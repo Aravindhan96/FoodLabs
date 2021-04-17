@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+        <script src="./js/qrscan.js"></script>
+    </head>
+<body>
+    <div data-role="page" id="paymentMethods" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>             
+                    <div class="back-btn float-left">
+                        <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="icon-back" alt=""></a>
+                    </div>
+                    
+                    <video id="qrVideo"></video> 
+                    <button id="stopqr" onclick="stopqr()">Exit scan</button>
+            </div>
+        </div>
+    </div> 
+    
+</body>
+<script type="text/javascript">
+    let scanner = new Instascan.Scanner({ video: document.getElementById('qrVideo') });
+    scanner.addListener('scan', function (content) {
+    var points = pointsQR(content);
+    window.location.href = "./popup.html";
+
+    });
+    Instascan.Camera.getCameras().then(function (cameras) {
+      if (cameras.length > 0) {
+        scanner.start(cameras[0]);
+      } else {
+        console.error('No cameras found.');
+      }
+    }).catch(function (e) {
+      console.error(e);
+    });
+  </script>    
+</html>

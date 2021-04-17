@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/main.js"></script>
+    <style>
+        @media all and (min-width: 23.4375em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-c,
+            .my-breakpoint.ui-grid-c .ui-block-d {
+                width: 335px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c {
+                width: 358px;
+                padding: 0px 10px 0px 0px !important;
+            }
+
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-d {
+                width: 358px;
+                padding: 0px 0px 0px 10px !important;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c {
+                width: 386px;
+                padding: 0px 10px 0px 0px !important;
+            }
+
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-d {
+                width: 386px;
+                padding: 0px 0px 0px 10px !important;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c {
+                width: 486px;
+                padding: 0px 10px 0px 0px !important;
+            }
+
+            .my-breakpoint.ui-grid-c .ui-block-d,
+            .my-breakpoint.ui-grid-c .ui-block-b {
+                width: 486px;
+                padding: 0px 0px 0px 10px !important;
+            }
+        }
+
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 295px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 680px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 740px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 940px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="account-banner"></div>
+                <div class="account-panel">
+                    <div class="profile-picture">
+                        <img src="/assets/images/profile-picture.png" alt="">
+                    </div>
+                    <div class="account-details">
+                        <p class="account-name">Aravindhan Sathiyanathan</p>
+                        <p class="contact-number">+94 77 046 1020</p>
+                        <p class="account-edit-option">Edit your profile</p>
+                    </div>
+                    <div class="account-option-section">
+                        <div class="ui-grid-a my-breakpoint account-option-col">
+                            <div class="ui-block-a">
+                                <p class="account-option"><img src="/assets/icons/saved-places.svg" class="account-option-icon" alt="">Saved Places</p>
+                            </div>
+                            <div class="ui-block-b">
+                                <p class="account-option"><img src="/assets/icons/reward.svg" class="account-option-icon" alt="">Rewards</p>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a my-breakpoint account-option-col">
+                            <div class="ui-block-a">
+                                <p class="account-option"><img src="/assets/icons/favorite.svg" class="account-option-icon" alt="">Favorites</p>
+                            </div>
+                            <div class="ui-block-b">
+                                <p class="account-option"><img src="/assets/icons/payment.svg" class="account-option-icon" alt="">Payment Methods</p>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a my-breakpoint account-option-col">
+                            <div class="ui-block-a">
+                                <p class="account-option"><img src="/assets/icons/faq.svg" class="account-option-icon" alt="">FAQ</p>
+                            </div>
+                            <div class="ui-block-b">
+                                <p class="account-option"><img src="/assets/icons/logout.svg" class="account-option-icon" alt="">Logout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a></li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon" alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a></li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon" alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg" class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+</body>
+
+</html>

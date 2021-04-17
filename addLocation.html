@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+        <style>    
+            @media all and (min-width: 23.4375em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 295px; }
+            }
+        
+            @media all and (min-width: 48em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 680px; }
+            }
+    
+            @media all and (min-width: 50.75em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 740px; }
+            }
+          
+            @media all and (min-width: 64em) {
+                .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+                .my-breakpoint.ui-grid-a .ui-block-b { width: 940px; }
+            }
+
+            @media all and (min-width: 23.4375em) {
+                .my-breakpoint.ui-grid-b .ui-block-a { width: 295px; }
+                .my-breakpoint.ui-grid-b .ui-block-b { width: 0px; }                
+                .my-breakpoint.ui-grid-b .ui-block-c { width: 25px;}
+            }
+        
+            @media all and (min-width: 48em) {
+                .my-breakpoint.ui-grid-b .ui-block-a { width: 680px; }
+                .my-breakpoint.ui-grid-b .ui-block-b { width: 0px;}
+                .my-breakpoint.ui-grid-b .ui-block-c { width: 25px;}
+            }
+    
+            @media all and (min-width: 50.75em) {
+                .my-breakpoint.ui-grid-b .ui-block-a { width: 740px;}
+                .my-breakpoint.ui-grid-b .ui-block-b { width: 0px}
+                .my-breakpoint.ui-grid-b .ui-block-c { width: 25px;}
+            }
+          
+            @media all and (min-width: 64em) {
+                .my-breakpoint.ui-grid-b .ui-block-a { width: 940px; }
+                .my-breakpoint.ui-grid-b .ui-block-b { width: 0px }
+                .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+            }
+            </style>
+    </head>
+<body>
+    <div data-role="page" id="addLocation">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-grid-a my-breakpoint">
+                <div class="ui-block-a return-icon float-left">
+                    <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+                </div>
+                <div class="ui-block-b float-right">
+                    <div class="search-bar">
+                        <input type="text" class="input" placeholder="Enter your location" data-type="search" id="divOfPs-input">
+                        <div class="btn" onclick="addlocation()">
+                            <img src="/assets/icons/search-white.svg" class="search-icon" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="main" class="main">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=ragama%20railway%20station&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://embedgooglemap.net/maps/62"></a><br>
+                    <style>.mapouter{position:relative;text-align:right;height:600px;width:600px;}</style>
+                    <a href="https://www.embedgooglemap.net">embed map</a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:600px;}</style>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div class="location-add-panel">
+                <div class="ui-grid-b my-breakpoint">
+                    <div class="ui-block-a float-left">
+                        <div class="orange-order" style="width: 90%;">
+                            <h5>Police Lane, Thewatta Rd,<br>Ragama</h5>
+                        </div>
+                        </div>
+                    <div class="ui-block-b float-right"></div>
+                    <div class="ui-block-c float-right">
+                        <a href=""><img src="/assets/icons/location-find.svg" class="" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <a href="addLocation.html">
+                        <div class="">
+                            <button class="button-active-4">
+                                Add New Location
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div data-role="page" id="addLocation1">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-grid-a my-breakpoint">
+                <div class="ui-block-a return-icon float-left">
+                    <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+                </div>
+                <div class="ui-block-b float-right">
+                    <div class="search-bar">
+                        <input type="text" class="input" placeholder="Enter your location" data-type="search" id="divOfPs-input">
+                        <div class="btn">
+                            <img src="/assets/icons/search-white.svg" class="search-icon" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="main" class="main">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Deanna%20dancing%20school&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://embedgooglemap.net/maps/62"></a><br>
+                    <style>.mapouter{position:relative;text-align:right;height:600px;width:600px;}</style>
+                    <a href="https://www.embedgooglemap.net">embed map</a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div class="location-add-panel">
+                <div class="ui-grid-b my-breakpoint">
+                    <div class="ui-block-a float-left">
+                        <div class="orange-order" style="width: 90%;">
+                            <h5>30/63H, Malalasekara Mawatha,<br>Col 07</h5>
+                        </div>
+                        </div>
+                    <div class="ui-block-b float-right"></div>
+                    <div class="ui-block-c float-right">
+                        <a href=""><img src="/assets/icons/location-find.svg" class="" alt=""></a>
+                    </div>
+                </div>
+                <div>
+                    <a href="#addlocationSuccess">
+                        <div class="">
+                            <button class="button-active-4">
+                                Add New Location
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div data-role="page" id="addlocationSuccess">
+        <div class="container">
+            <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">                    
+                    <p class="popup-text">Location added successfully</p>
+                    <a href="home.html" onclick="updatePoints()" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Okay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

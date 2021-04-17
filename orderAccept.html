@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        @media all and (min-width: 23.4375em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 305px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 255px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 255px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+
+            .my-breakpoint.ui-grid-a .ui-block-a,
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 255px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="oder-placed-screen" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="account-banner"></div>
+                <div class="oder-panel">
+                    <div class="order-picture">
+                        <img width="120" src="/assets/images/Order_Basket.png" alt="">
+                    </div>
+                    <div class="order-details-heading">
+                        <p class="order-heading">Order has been made.</p>
+                        <p class="order-descriiption">Waiting for order to be accepted</p>
+                    </div>
+
+                    <div class="progress">
+                        <ul>
+                            <li>
+                               <a href="#oder-process" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-left:-54px;"></a>
+                                <hr class="sidebardiv">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen01" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-left:-30px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 30px;width: 65px;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen02" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-left:-10px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 38px;width: 63px; ">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen03" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-bottom: 2px;"></a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: -12%;">
+                        <div class="ui-block-a">
+                            <div class="cart-tiles-oder shadow1">
+                                <div>
+                                    <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content shadow1"
+                                        src="assets/images/dioni-delight-02.png" alt="food-item">
+                                    <div style="margin: 30px ;">
+                                        <p class="oder-detail"><b>Dioni's Delight</b></p>
+                                        <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                                    </div>
+                                </div>
+                                <div class="order-infor">
+                                    <p>2 x Honey Pancakes <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+                                    <p>Discount <a style="float: right; color: #fd5800;">LKR 0</a></p>
+                                    <p>Total <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+
+                                    <div class="btn-contact-seller">
+                                        <a href="#" data-transition="slidedown">
+                                            <button style=" width: 289px!important;" disabled class="button-active"
+                                                id="btnOTPtest" onclick="submitPhone()">
+                                                Contact Seller
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    
+
+    </div>
+
+
+    <div data-role="page" id="oder-process" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="account-banner"></div>
+                <div class="account-panel">
+                    <div class="order-picture">
+                        <img width="120" src="/assets/images/Order_Placed.png" alt="">
+                    </div>
+                    <div class="order-details-heading">
+                        <p class="order-heading">Order has been accepted.</p>
+                        <p class="order-descriiption">Order is being prepared</p>
+                    </div>
+
+                    <div class="progress"style="margin-top: 52px;">
+                        <ul>
+                            <li>
+                                <a href="#oder-process" data-transition="none"><img class="success-tick" src="assets/icons/tick-mark.svg"></a>
+                                <hr class="sidebardiv">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen01" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-left:-32px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 30px;width: 65px;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen02" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-left:-10px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 38px;width: 63px; ">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen03" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-bottom: 3px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: -12%;">
+                        <div class="ui-block-a">
+                            <div class="cart-tiles-oder shadow1">
+                                <div>
+                                    <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content shadow1"
+                                        src="assets/images/dioni-delight-02.png" alt="food-item">
+                                    <div style="margin: 30px ;">
+                                        <p class="oder-detail"><b>Dioni's Delight</b></p>
+                                        <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                                    </div>
+                                </div>
+                                <div class="order-infor">
+                                    <p>2 x Honey Pancakes <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+                                    <p>Discount <a style="float: right; color: #fd5800;">LKR 0</a></p>
+                                    <p>Total <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+
+                                    <div class="btn-contact-seller">
+                                        <a href="#call" data-transition="slidedown">
+                                            <button style=" width: 289px!important;" class="button-active"
+                                                id="btnOTPtest" onclick="submitPhone()">
+                                                Contact Seller
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+    <div data-role="page" id="oder-placed-screen01" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="account-banner"></div>
+                <div class="account-panel">
+                    <div class="order-picture">
+                        <img width="120" src="/assets/images/Order_Processing.png" alt="">
+                    </div>
+                    <div class="order-details-heading">
+                        <p class="order-heading">Order is being prepared</p>
+                        <p class="order-descriiption">Estimated delivery time 10:10am - 10:30am</p>
+                    </div>
+
+                    <div class="progress"style="margin-top: 52px;">
+                        <ul>
+                            <li>
+                                <a href="#oder-process" data-transition="none"><img class="success-tick" style="margin-bottom: 1px;" src="assets/icons/tick-marker-small.svg"></a>
+                                <hr class="sidebardiv" style="width: 64px; margin-left:16px; border-top: 2.5px solid#FD5800;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen01" data-transition="none"><img src="assets/icons/tick-mark.svg" style="margin-left:-30px; margin-bottom: -5px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 35px;width: 60px;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen02" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-left:-10px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 38px;width: 63px; ">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen03" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-bottom: 3px;"></a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: -12%;">
+                        <div class="ui-block-a">
+                            <div class="cart-tiles-oder shadow1">
+                                <div>
+                                    <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content shadow1"
+                                        src="assets/images/dioni-delight-02.png" alt="food-item">
+                                    <div style="margin: 30px ;">
+                                        <p class="oder-detail"><b>Dioni's Delight</b></p>
+                                        <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                                    </div>
+                                </div>
+                                <div class="order-infor">
+                                    <p>2 x Honey Pancakes <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+                                    <p>Discount <a style="float: right; color: #fd5800;">LKR 0</a></p>
+                                    <p>Total <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+
+                                    <div class="btn-contact-seller">
+                                        <a href="#call" data-transition="slidedown">
+                                            <button style=" width: 289px!important;" class="button-active"
+                                                id="btnOTPtest" onclick="submitPhone()">
+                                                Contact Seller
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+    <div data-role="page" id="oder-placed-screen02" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="account-banner"></div>
+                <div class="account-panel">
+                    <div class="order-picture">
+                        <img width="120" src="/assets/images/Order_Delievery.png" alt="">
+                    </div>
+                    <div class="order-details-heading">
+                        <p class="order-heading">Order is being delivered.</p>
+                        <p class="order-descriiption">Estimated delivery time 10:10am - 10:30am</p>
+                    </div>
+
+                    <div class="progress"style="margin-top: 51px;">
+                        <ul>
+                            <li>
+                                <a href="#oder-process" data-transition="none"><img class="success-tick" style="margin-bottom: 1px;" src="assets/icons/tick-marker-small.svg"></a>
+                                <hr class="sidebardiv" style="width: 66px; margin-left:16px; border-top: 2.5px solid#FD5800;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen01" data-transition="none"><img src="assets/icons/tick-marker-small.svg" style="margin-left:-33px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 30px;width: 59px; border-top: 2.5px solid#FD5800;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen02" data-transition="none"><img src="assets/icons/tick-mark.svg" style="margin-left:-10px; margin-bottom: -4px; "></a>
+                                <hr class="sidebardiv" style="margin-left: 44px; width: 56px;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen03" data-transition="none"><img src="assets/icons/Dot.svg" style="margin-bottom: 3px;"></a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: -12%;">
+                        <div class="ui-block-a">
+                            <div class="cart-tiles-oder shadow1">
+                                <div>
+                                    <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content shadow1"
+                                        src="assets/images/dioni-delight-02.png" alt="food-item">
+                                    <div style="margin: 30px ;">
+                                        <p class="oder-detail"><b>Dioni's Delight</b></p>
+                                        <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                                    </div>
+                                </div>
+                                <div class="order-infor">
+                                    <p>2 x Honey Pancakes <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+                                    <p>Discount <a style="float: right; color: #fd5800;">LKR 0</a></p>
+                                    <p>Total <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+
+                                    <div class="btn-contact-seller">
+                                        <a href="#call" data-transition="slidedown">
+                                            <button style=" width: 289px!important; text-align: center;" class="button-active"
+                                                id="" onclick="submitPhone()"><img src="/assets/icons/phone-call.svg" style="margin-left: -20px; margin-right: 5px; height: 19px; margin-bottom: -4px;" alt="">
+                                                Call
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+    <div data-role="page" id="oder-placed-screen03" style="background-color: #FFFFFF;">
+        <div data-role="main" data-position="fixed" class="ui-content main p-0">
+            <div>
+                <div class="account-banner"></div>
+                <div class="account-panel">
+                    <div class="order-picture">
+                        <img width="120" src="/assets/images/Order_Completed.png" alt="">
+                    </div>
+                    <div class="order-details-heading">
+                        <p class="order-heading">Order delivered.</p>
+                        <p class="order-descriiption">Please rate the order</p>
+                    </div>
+
+                    <div class="progress"style="margin-top: 51px;">
+                        <ul>
+                            <li>
+                                <a href="#oder-process" data-transition="none"><img class="success-tick" style="margin-bottom: 1px;" src="assets/icons/tick-marker-small.svg"></a>
+                                <hr class="sidebardiv" style="width: 66px; margin-left:16px; border-top: 2.5px solid#FD5800;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen01" data-transition="none"><img src="assets/icons/tick-marker-small.svg" style="margin-left:-33px;"></a>
+                                <hr class="sidebardiv" style="margin-left: 30px;width: 59px; border-top: 2.5px solid#FD5800;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen02" data-transition="none"><img src="assets/icons/tick-marker-small.svg" style="margin-left:-10px; "></a>
+                                <hr class="sidebardiv" style="margin-left: 44px; width: 50px;border-top: 2.5px solid#FD5800;">
+                            </li>
+                            <li>
+                                <a href="#oder-placed-screen03" data-transition="none"><img src="assets/icons/tick-mark.svg" style="margin-bottom: -2.5px;"></a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: -12%;">
+                        <div class="ui-block-a">
+                            <div class="cart-tiles-oder shadow1">
+                                <div>
+                                    <img style="margin-top: 15px; margin-left: 15px;" class="cartimage-content shadow1"
+                                        src="assets/images/dioni-delight-02.png" alt="food-item">
+                                    <div style="margin: 30px ;">
+                                        <p class="oder-detail"><b>Dioni's Delight</b></p>
+                                        <p class="oder-detail" style="color:#929292">13 November, 9:41am</p>
+                                    </div>
+                                </div>
+                                <div class="order-infor">
+                                    <p>2 x Honey Pancakes <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+                                    <p>Discount <a style="float: right; color: #fd5800;">LKR 0</a></p>
+                                    <p>Total <a style="float: right; color: #fd5800;">LKR 1100</a></p>
+
+                                    <div class="btn-contact-seller">
+                                        <a href="RateAndReview.html">
+                                            <button style=" width: 289px!important;" class="button-active"
+                                                id="btnOTPtest" onclick="submitPhone()">
+                                                Rate and Review
+                                            </button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a>
+                    </li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a>
+                    </li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon"
+                                alt=""><br>Order</a></li>
+                    <li><a href="account.html" class="ui-button-active"><img src="/assets/icons/account-orange.svg"
+                                class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+    <div data-role="page" id="call">
+        <div class="container">
+            <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">
+                    <p class="popup-text">Call 0774545862</p>
+                    <a href="#oder-process" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Call</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

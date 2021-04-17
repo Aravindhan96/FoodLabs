@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+<div data-role="page" id="popupBox" onload="popupmsg()">
+    <div class="container">
+        <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+            <div role="main" class="ui-content">                    
+                <p class="popup-text" id="pointsPopup">QR code scanned successfully</p>
+                <a href="rewards.html" onclick="updatePoints()" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Okay</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

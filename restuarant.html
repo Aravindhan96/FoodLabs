@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="JS/main.js"></script>
+        <style>
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-c,
+            .my-breakpoint.ui-grid-c .ui-block-d { width: 335px; }
+        }
+    
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c { width: 358px; padding: 0px 10px 0px 0px!important;}
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-d { width: 358px; padding: 0px 0px 0px 10px!important;}
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-c .ui-block-a,
+            .my-breakpoint.ui-grid-c .ui-block-c { width: 386px; padding: 0px 10px 0px 0px!important;}
+            .my-breakpoint.ui-grid-c .ui-block-b,
+            .my-breakpoint.ui-grid-c .ui-block-d { width: 386px; padding: 0px 0px 0px 10px!important;}
+        }
+      
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-c .ui-block-a ,
+            .my-breakpoint.ui-grid-c .ui-block-c { width: 486px; padding: 0px 10px 0px 0px!important;}
+            .my-breakpoint.ui-grid-c .ui-block-d,
+            .my-breakpoint.ui-grid-c .ui-block-b { width: 486px; padding: 0px 0px 0px 10px!important;}    
+        }
+
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 295px; }
+        }
+    
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 680px; }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 740px; }
+        }
+      
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-a .ui-block-b { width: 940px; }
+        }
+        </style>
+    </head>
+<body>
+    <div data-role="page" id="restuarant">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="ui-grid-a my-breakpoint">
+                <a data-rel="back">
+                    <div class="ui-block-a filter-icon float-left">
+                        <img src="/assets/icons/back-arrow.svg" class="return-icon" alt="">
+                    </div>
+                </a>
+                <div class="ui-block-b float-right">
+                    <div class="search-bar">
+                        <input type="text" class="input" placeholder="What are you looking for ?" data-type="search" id="divOfPs-input">
+                        <div class="btn">
+                            <img src="/assets/icons/search-white.svg" class="search-icon" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div>
+                <h4 class="m-0">Restaurants</h4>
+            </div>
+                <div class="ui-grid-c my-breakpoint">
+                    <div class="elements" data-filter="true" data-input="#divOfPs-input">
+                        <div class="ui-block-a">
+                            <a href="dioni-delight.html">
+                                <div class="search-tiles dioni-delight">
+                                    <p class="category-name">Dioni's Delight</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ui-block-b">    
+                            <div class="search-tiles meraki-by-asi">
+                                <p class="category-name">Meraki by Asi</p>
+                            </div>
+                        </div>
+                        <div class="ui-block-c">    
+                            <div class="search-tiles mama-kitchen">
+                                <p class="category-name">Mama's Kitchen</p>
+                            </div>
+                        </div>
+                        <div class="ui-block-d">    
+                            <div class="search-tiles sri-vihar">
+                                <p class="category-name">Sri Vihar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon" alt=""><br>Home</a></li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon" alt=""><br>Search</a></li>
+                    <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a></li>
+                    <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon" alt=""><br>Order</a></li>
+                    <li><a href="account.html"><img src="/assets/icons/account-grey.svg" class="navbar-icon" alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

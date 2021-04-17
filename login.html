@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+    </head>
+<body>
+    <div data-role="page" id="enterMobileNo">
+        <div data-role="main" class="ui-content container-2">
+            <a data-rel="back" class="back-icon"><img src="/assets/icons/back-arrow.svg"></a>
+            <div class="signup-section">
+                <h1>Enter your<br> mobile number</h1>
+                <p class="signupinfotext">We will send you a confirmation code</p>
+                <input class="input-field" type="tel" id="inputTel" placeholder="+94 77 046 1020" onkeyup="enableButton('inputTel')" maxlength="10"> 
+            </div>
+            <div class="button-container">
+                <a href="#enterOTP">
+                    <button disabled class="button-active" id="btnOTPtest" onclick="submitPhone()"> 
+                        Next
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="enterOTP">
+        <div data-role="main" class="ui-content container-2">
+            <a data-rel="back" class="back-icon"><img src="/assets/icons/back-arrow.svg"></a>
+            <div class="signup-section">
+                <h1>Enter code sent<br>to your number</h1>
+                <p class="signupinfotext" id=otptelno></p>
+                <p class="signupinfotext" id=resendOTPtext></p>
+                <input class="otp-input-field" type="tel" id="inputOtp" placeholder="0 0 0 0" onkeyup="verifyOTP('inputOtp')" maxlength="4"> 
+            </div>
+            <div class="button-container">
+                <p class="resendOTP" id="otpTimermsg">Resend Code in 30:00</p>
+                <!-- <a href="#signInConfirm">
+                    <button class="button-active" id="btnOTPtest" onclick="submitPhone()"> 
+                        Next
+                    </button>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="signInConfirm">
+        <div class="container">
+            <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">
+                    <h1>Delete page?</h1>
+                    <p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
+                    <a href="home.html" class="ui-btn ui-shadow ui-corner-all ui-btn-a">Sounds good</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

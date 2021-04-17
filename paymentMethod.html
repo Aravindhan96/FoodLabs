@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/main.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <a data-rel="back" class="ui-block-a return-icon float-left">
+                <img src="/assets/icons/back-arrow.svg" class="return-icon" alt="">
+            </a>
+
+            <div>
+                <h2>Payment Methods</h2>
+            </div>
+        </div>
+
+        <div data-role="main">
+            <div class="ui-content" style="overflow: visible; overflow-x: visible">
+                <div class="" data-filter="true" data-input="#divOfPs-input">
+                    
+                        <form>
+                            <div>
+                                <h4 class="m-0">Change Payment Method</h4>
+                            </div>
+
+
+                            <fieldset class="" data-role="controlgroup" data-iconpos="right">
+
+                                <input class="methodselection" type="checkbox" name="checkbox-h-6a"
+                                    id="checkbox-h-6a">
+                                <img alt=""></img>
+                                        <label for="checkbox-h-6a">Cash</label>
+                                <img src="assets/icons/mastercard.svg" alt=""></img>
+                                        <input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+                                        <label for="checkbox-h-6b">.... ..... .... 4450</label>
+                                <img src="assets/icons/visa.svg" alt=""></img>
+                                        <input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+                                        <label for="checkbox-h-6c">.... ..... .... 9647</label>
+
+                            </fieldset>
+                        </form>
+                        
+                        <div class="center-alignment button-container-withnav">
+                            <button class="button-active">Confirm Payment Method</button>
+                        </div>      
+
+                </div>
+            </div>
+
+           
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-content p-0">
+            <div data-role="navbar" data-grid="d" class="navbar">
+                <ul>
+                    <li><a href="home.html"><img src="/assets/icons/home-grey.svg" class="navbar-icon"
+                                alt=""><br>Home</a></li>
+                    <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon"
+                                alt=""><br>Search</a></li>
+                    <li><a href="mycart.html" class="ui-button-active"><img src="/assets/icons/cart-orange.svg"
+                                class="navbar-icon" alt=""><br>Cart</a></li>
+                    <li><a href="#"><img src="/assets/icons/order-grey.svg" class="navbar-icon" alt=""><br>Order</a>
+                    </li>
+                    <li><a href="account.html"><img src="/assets/icons/account-grey.svg" class="navbar-icon"
+                                alt=""><br>Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

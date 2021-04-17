@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+    </head>
+<body>
+    <div data-role="page" id="enterMobileNo">
+        <div data-role="main" class="ui-content container-2">
+            <a data-rel="back" class="back-icon"><img src="/assets/icons/back-arrow.svg"></a>
+            <div class="signup-section">
+                <h1>Enter your<br> mobile number</h1>
+                <p class="signupinfotext">We will send you a confirmation code</p>
+                <input class="input-field" type="tel" id="inputTel" placeholder="+94 77 046 1020" onkeyup="enableButton('inputTel')" maxlength="10"> 
+            </div>
+            <div class="button-container">
+                <a href="#enterOTP">
+                    <button disabled class="button-active" id="btnOTPtest" onclick="submitPhone()"> 
+                        Next
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="enterOTP">
+        <div data-role="main" class="ui-content container-2">
+            <a data-rel="back" class="back-icon"><img src="/assets/icons/back-arrow.svg"></a>
+            <div class="signup-section">
+                <h1>Enter code sent<br>to your number</h1>
+                <p class="signupinfotext" id=otptelno></p>
+                <p class="signupinfotext" id=resendOTPtext></p>
+                <input class="otp-input-field" type="tel" id="inputOtp" placeholder="0 0 0 0" onkeyup="verifyOTPSignup('inputOtp')" maxlength="4"> 
+            </div>
+            <div class="button-container">
+                <p class="resendOTP" id="otpTimermsg">Resend Code in 30:00</p>
+                <!-- <a href="#signInConfirm">
+                    <button class="button-active" id="btnOTPtest" onclick="submitPhone()"> 
+                        Next
+                    </button>
+                </a> -->
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="enterName">
+        <div data-role="main" class="ui-content container-2">
+            <a data-rel="back" class="back-icon"><img src="/assets/icons/back-arrow.svg"></a>
+            <div class="signup-section">
+                <h1>Enter your name</h1>
+                <input class="name-input-field" id="signName" type="tel" placeholder="First name" onkeyup="enableButtonName('signName')" maxlength="20"> 
+                <input class="name-input-field" type="tel" placeholder="Last name" maxlength="20"> 
+            </div>
+            <div class="button-container">
+                <a href="#enterEmail">
+                    <button disabled class="button-active" id="btnname"> 
+                        Next
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="enterEmail">
+        <div data-role="main" class="ui-content container-2">
+            <a data-rel="back" class="back-icon"><img src="/assets/icons/back-arrow.svg"></a>
+            <div class="signup-section">
+                <h1>Enter your email</h1>
+                <input class="name-input-field" id="signEmail" type="tel" placeholder="Email address" onkeyup="enableButtonEmail('signEmail')" maxlength="50"> 
+            </div>
+            <div class="button-container">
+                <a href="#signUpConfirm" data-transition="slidedown">
+                    <button disabled class="button-active" id="btnemail"> 
+                        Next
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="signUpConfirm">
+        <div class="container">
+            <div role="dialog" class="ui-dialog-contain ui-overlay-shadow ui-corner-all">
+                <div role="main" class="ui-content">                    
+                    <p class="popup-text">Your account has been successfully created</p>
+                    <a href="introduction.html" class="popup-btn ui-btn ui-shadow ui-corner-all ui-btn-a">Okay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>QRTEST</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="homestyles.css"/>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> 
+  
+<!-- Link QR CSS -->
+ <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<script src="./js/qrscan.js"></script>
+<!-- <script src="../../nach_i-phone/nach_i-phone/instascan.min 2.js"></script> -->
+
+
+<!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+</head> 
+<body> 
+   
+<div data-role="page" data-theme="null" id=>
+  
+
+	<div data-role="content" class="ui-content">	
+
+  
+        <video id="preview"></video>
+        
+       
+       <div>
+    <button onclick="stop()"STOP></button>
+
+
+    </div>
+	</div>
+
+</div><!-- /page -->
+
+</body>
+<script type="text/javascript">
+    var scanner = new Instascan.Scanner ({ video: document.getElementById('preview') }); scanner.addListener ('scan', function (content) {
+  alert(content)
+    window.open (content, '_blank'); });
+    Instascan.Camera.getCameras().then(function (cameras) { if (cameras.length > 0) {
+    scanner.start(cameras[0]); } else {
+    console.error('No cameras found.'); }
+    }).catch(function (e) { console.error(e);
+    });
+    
+    function stopqr(){
+      scanner.stop()
+    }
+    </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

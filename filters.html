@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>FoodLabs</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="JS/main.js"></script>
+    <style>
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-b .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-b {
+                width: 295px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-c {
+                width: 25px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-b .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-b {
+                width: 655px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-c {
+                width: 25px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-b .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-b {
+                width: 715px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-c {
+                width: 25px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-b .ui-block-a {
+                width: 25px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-b {
+                width: 915px;
+            }
+
+            .my-breakpoint.ui-grid-b .ui-block-c {
+                width: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="return-icon float-left">
+                <a data-rel="back"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Filters <a href="home.html" class="email float-right">Reset</a></h2>
+            </div>
+        </div>
+        <div data-role="main" class="ui-content main">
+            <div class="filter-list">
+                <button class="filter-tabs">
+                    Name in Ascending
+                </button>
+                <button class="filter-tabs">
+                    Name in Descending
+                </button>
+                <button class="filter-tabs">
+                    Price High to Low
+                </button>
+                <button class="filter-tabs">
+                    Price Low to High
+                </button>
+            </div>
+            <div>
+                <a href="all-items-2.html">
+                    <div class="center-alignment">
+                        <button class="button-active-2">
+                            Apply Filter
+                        </button>
+                    </div>
+                </a>
+            </div>
+            <script>
+                function sortFoodItemList() {
+                    var list, i, switching, b, shouldSwitch;
+                    list = document.getElementsByClassName("category-name");
+                    switching = true;
+                    /* Make a loop that will continue until
+                    no switching has been done: */
+                    while (switching) {
+                        // start by saying: no switching is done:
+                        switching = false;
+                        b = list.getElementsByTagName("P");
+                        // Loop through all list-items:
+                        for (i = 0; i < (b.length - 1); i++) {
+                            // start by saying there should be no switching:
+                            shouldSwitch = false;
+                            /* check if the next item should
+                            switch place with the current item: */
+                            if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+                                /* if next item is alphabetically
+                                lower than current item, mark as a switch
+                                and break the loop: */
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                        if (shouldSwitch) {
+                            /* If a switch has been marked, make the switch
+                            and mark the switch as done: */
+                            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                            switching = true;
+                        }
+                    }
+                }
+            </script>
+          
+    </div>
+    </div>
+</body>
+
+</html>

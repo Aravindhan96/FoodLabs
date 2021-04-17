@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="JS/main.js"></script>
+        <style>            
+            @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 590px;
+                height: 400px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 375px;
+                height: 360px;
+            }
+        }
+
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 900px;
+                height: 550px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 400px;
+                height: 450px;
+            }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 812px;
+                height: 400px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 812px;
+                height: 400px;
+            }
+        }
+
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-a .ui-block-a {
+                width: 1024px;
+                height: 370px;
+            }
+
+            .my-breakpoint.ui-grid-a .ui-block-b {
+                width: 400px;
+                height: 468px;
+            }
+        }
+        </style>
+    </head>
+<body>
+    <div data-role="page" id="intro-01">
+        <div data-role="main" class="main">
+            <div class="ui-grid-a my-breakpoint ofv center-alignment">
+                <div class="ui-block-a">
+                    <div class="item-image eat-fresh"></div>
+                </div>
+                <div class="ui-block-b">
+                    <div>
+                        <h1 class="text-align-center" style="margin: 30px 0;" >Eat Fresh,<br> Eat Healthy</h1>
+                        <p class="signupinfotext text-align-center" style="margin: 0 20%;">
+                            Home-made healthy food to keep you in shape
+                        </p>
+                        <p class="signupinfotext text-align-center" style="margin: 35px 20%;">
+                            <img src="/assets/images/nav-01.png" alt="" href="#intro-02">
+                        </p>
+                    </div>
+                    <div>
+                        <div class="center-alignment">
+                            <a href="#intro-02">
+                                <button class="button-active-02">
+                                    Next<img src="/assets/icons/arrow.svg" style="float: right;" alt="">
+                                </button>
+                            </a>
+                        </div>
+                        <div class="text-align-center">
+                            <a href="home-2.html" class="skip-link">Skip</a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div> 
+    <div data-role="page" id="intro-02">
+        <div data-role="main" class="main">
+            <div class="ui-grid-a my-breakpoint ofv center-alignment">
+                <div class="ui-block-a">
+                    <div class="item-image food_delivery"></div>
+                </div>
+                <div class="ui-block-b">
+                    <div>
+                        <h1 class="text-align-center" style="margin: 30px 0;" >Stay at home,<br>we deliver!</h1>
+                        <p class="signupinfotext text-align-center" style="margin: 0 20%;">
+                            Door-to-door delivery service available 24/7
+                        </p>
+                        <p class="signupinfotext text-align-center" style="margin: 35px 20%;">
+                            <img src="/assets/images/nav-02.png" alt="" href="#intro-02">
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#intro-03">
+                            <div class="center-alignment">
+                                <button class="button-active-02">
+                                    Next<img src="/assets/icons/arrow.svg" style="float: right;" alt="">
+                                </button>
+                            </div>
+                            <div class="text-align-center">
+                                <a href="home-2.html" class="skip-link">Skip</a>
+                            </div>
+                        </a>            
+                    </div>         
+                </div>
+            </div>            
+        </div>
+    </div> 
+    <div data-role="page" id="intro-03">
+        <div data-role="main" class="main">
+            <div class="ui-grid-a my-breakpoint ofv center-alignment">
+                <div class="ui-block-a">
+                    <div class="item-image payment_on_delivery"></div>
+                </div>
+                <div class="ui-block-b">
+                    <div>
+                        <h1 class="text-align-center" style="margin: 30px 0;" >Payment made<br>simple.</h1>
+                        <p class="signupinfotext text-align-center" style="margin: 0 20%;">
+                            Contact-less and convenient transactions
+                        </p>
+                        <p class="signupinfotext text-align-center" style="margin: 35px 20%;">
+                            <img src="/assets/images/nav-03.png" alt="" href="#intro-02">
+                        </p>
+                    </div>
+                    <div>
+                        <a href="home-2.html">
+                            <div class="center-alignment">
+                                <button class="button-active-02">
+                                   Lets Go!
+                                </button>
+                            </div>
+                            <div class="text-align-center">
+                                <a href="home-2.html" class="skip-link">Skip</a>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+            </div>          
+        </div>
+    </div> 
+</body>
+</html>

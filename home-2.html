@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="JS/main.js"></script>
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+    </head>
+<body>
+<div data-role="page" id="home">
+    <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+        <div class="ui-grid-a my-breakpoint">
+            <a href="filters.html">
+                <div class="ui-block-a filter-icon float-left">
+                    <img src="/assets/icons/settings.svg" class="filter-icon" alt="">
+                </div>
+            </a>
+            <a href="addLocation.html" class="ui-block-b float-right"style="width: auto; ">
+                <img src="/assets/icons/location-pin.svg" class="filter-icon" alt="">
+            </a>
+        </div>
+    </div>
+    <div data-role="main" class="main">
+        <div class="navtab-list">
+            <a href="all-items.html">
+                <div class="navtabs">
+                    <img src="/assets/icons/home-made.svg" class="navtab-icon">All Items
+                </div>
+            </a>
+            <a href="#HomeFood">
+                <div class="navtabs">
+                    <img src="/assets/icons/home-made.svg" class="navtab-icon">Home Food
+                </div>
+            </a>
+            <a href="restuarant.html">
+                <div class="navtabs">
+                    <img src="/assets/icons/restaurant.svg" class="navtab-icon">Restaurants
+                </div>
+            </a>
+            <a href="#FreshJuices">
+                <div class="navtabs">
+                    <img src="/assets/icons/fresh-juice.svg" class="navtab-icon">Fresh Juices
+                </div>
+            </a>
+            <a href="#CoffeeShop">
+                <div class="navtabs">
+                    <img src="/assets/icons/coffee-shop.svg" class="navtab-icon">Coffee Shop
+                </div>
+            </a>
+            <a href="#SriLankan">
+                <div class="navtabs">
+                    <img src="/assets/icons/sri-lankan.svg" class="navtab-icon">Sri Lankan
+                </div>
+            </a>
+            <a href="#Indian">
+                <div class="navtabs">
+                    <img src="/assets/icons/indian.svg" class="navtab-icon">Indian
+                </div>
+            </a>
+            <a href="#Chinese">
+                <div class="navtabs">
+                    <img src="/assets/icons/chinese.svg" class="navtab-icon">Chinese
+                </div>
+            </a>
+            <a href="#FastFood">
+                <div class="navtabs">
+                    <img src="/assets/icons/fast-food.svg" class="navtab-icon">Fast Food
+                </div>
+            </a>
+            <a href="#Desserts">
+                <div class="navtabs">
+                    <img src="/assets/icons/desserts.svg" class="navtab-icon">Desserts
+                </div>
+            </a>
+        </div>
+        <div class="promo-tile promo"></div>
+        <div>
+        <div class="food-categories">
+            <p class="food-category-section"> <span class="food-category-header"> Popular Food </span><a href="" class="float-right"><button class="view-all-btn">View All</button></a></p>
+            <div class="food-tiles-section">
+                <div class="food-tiles salad">
+                    <div class="food-details">
+                        <p class="food-title">Vegan Salad</p>
+                        <p class="food-maker">Mama's Kitchen</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 450.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles biriyani">
+                    <div class="food-details">
+                        <p class="food-title">Chicken Biryani</p>
+                        <p class="food-maker">Mama's Kitchen</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 550.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">5.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles beef-lasagna">
+                    <div class="food-details">
+                        <p class="food-title">Beef Lasagna</p>
+                        <p class="food-maker">Mama's Kitchen</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 650.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles hawaiian-pizza">
+                    <div class="food-details">
+                        <p class="food-title">Hawaiian Pizza</p>
+                        <p class="food-maker">Rocco's Pizza</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 1550.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="food-categories">
+            <p class="food-category-section"> <span class="food-category-header">Special Offers</span><a href="" class="float-right"><button class="view-all-btn">View All</button></a></p>
+            <div class="food-tiles-section">
+                <div class="food-tiles choco-cookies">
+                    <div class="food-details">
+                        <p class="food-title">Choco Cookies</p>
+                        <p class="food-maker">Dioni's Delight</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 300.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <a href="honey-pancakes.html">
+                    <div class="food-tiles honey-pancakes">
+                        <div class="food-details">
+                            <p class="food-title">Honey Pancakes</p>
+                            <p class="food-maker">Dioni's Delight</p>
+                            <p style="margin: 5px 0;">
+                                <span class="food-price">LKR 550.00</span>
+                                <span class="food-rating float-right">
+                                    <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">5.0
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <div class="food-tiles milkshake">
+                    <div class="food-details">
+                        <p class="food-title">Chocolate Milks...</p>
+                        <p class="food-maker">Meraki by Asi</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 400.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles tomata-pasta">
+                    <div class="food-details">
+                        <p class="food-title">Tomato Pasta</p>
+                        <p class="food-maker">Pasta Corner</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 450.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="food-categories">
+            <p class="food-category-section"> <span class="food-category-header">Favorites</span><a href="" class="float-right"><button class="view-all-btn">View All</button></a></p>
+            <div class="food-tiles-section">
+                <div class="food-tiles chicken-tacos">
+                    <div class="food-details">
+                        <p class="food-title">Chicken Tacos</p>
+                        <p class="food-maker">Taco Treats</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 800.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">5.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles chicken-burrito">
+                    <div class="food-details">
+                        <p class="food-title">Chicken Burrito</p>
+                        <p class="food-maker">Taco Treats</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 700.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles creamy-pasta">
+                    <div class="food-details">
+                        <p class="food-title">Creamy Pasta</p>
+                        <p class="food-maker">Mama's Kitchen</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 650.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles bbq-pizza">
+                    <div class="food-details">
+                        <p class="food-title">BBQ Pizza</p>
+                        <p class="food-maker">Rocco's Pizza</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 1550.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="food-categories">
+            <p class="food-category-section"> <span class="food-category-header">Indian Special</span><a href="" class="float-right"><button class="view-all-btn">View All</button></a></p>
+            <div class="food-tiles-section">
+                <div class="food-tiles pot-butter-chicken">
+                    <div class="food-details">
+                        <p class="food-title">Pot Butter Chicken</p>
+                        <p class="food-maker">Chai Marke</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 700.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles poori">
+                    <div class="food-details">
+                        <p class="food-title">Poori        </p>
+                        <p class="food-maker">Chai Marke</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 400.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">5.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles tandoori-chicken">
+                    <div class="food-details">
+                        <p class="food-title">Tandoori Chicken</p>
+                        <p class="food-maker">Chai Marke</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 650.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles dhaal-gosht">
+                    <div class="food-details">
+                        <p class="food-title">Dhaal Gosht</p>
+                        <p class="food-maker">Chai Marke</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 550.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="food-categories">
+            <p class="food-category-section"> <span class="food-category-header">Chinese Special</span><a href="" class="float-right"><button class="view-all-btn">View All</button></a></p>
+            <div class="food-tiles-section">
+                <div class="food-tiles kung-pao-chicken">
+                    <div class="food-details">
+                        <p class="food-title">Kung Pao Chick...</p>
+                        <p class="food-maker">Szechuan Delight</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 600.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles sushi">
+                    <div class="food-details">
+                        <p class="food-title">Sushi</p>
+                        <p class="food-maker">Szechuan Delight</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 500.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">5.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles sweet-sour-pork">
+                    <div class="food-details">
+                        <p class="food-title">Sweet and Sour...</p>
+                        <p class="food-maker">Szechuan Delight</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 650.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.0
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="food-tiles veg-noodles">
+                    <div class="food-details">
+                        <p class="food-title">Chinese Veg No...</p>
+                        <p class="food-maker">Szechuan Delight</p>
+                        <p style="margin: 5px 0;">
+                            <span class="food-price">LKR 550.00</span>
+                            <span class="food-rating float-right">
+                                <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">4.5
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- todo use the appropritare icons -->
+    <div data-role="footer" data-position="fixed" class="ui-content p-0">
+        <div data-role="navbar" data-grid="d" class="navbar">
+            <ul>
+                <li><a href="home.html" class="ui-button-active"><img src="/assets/icons/home-orange.svg" class="navbar-icon" alt=""><br>Home</a></li>
+                <li><a href="search.html"><img src="/assets/icons/search-grey.svg" class="navbar-icon" alt=""><br>Search</a></li>
+                <li><a href="mycart.html"><img src="/assets/icons/cart-grey.svg" class="navbar-icon" alt=""><br>Cart</a></li>
+                <li><a href="orders.html"><img src="/assets/icons/order-grey.svg" class="navbar-icon" alt=""><br>Order</a></li>
+                <li><a href="account.html"><img src="/assets/icons/account-grey.svg" class="navbar-icon" alt=""><br>Account</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

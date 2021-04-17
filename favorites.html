@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodLabs</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+        <link rel = "stylesheet" 
+           href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="./js/main.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <style>
+
+        @media all and (min-width: 23.4375em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 295px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+    
+        @media all and (min-width: 48em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 655px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+
+        @media all and (min-width: 50.75em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 715px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+      
+        @media all and (min-width: 64em) {
+            .my-breakpoint.ui-grid-b .ui-block-a { width: 25px; }
+            .my-breakpoint.ui-grid-b .ui-block-b { width: 915px; }
+            .my-breakpoint.ui-grid-b .ui-block-c { width: 25px; }
+        }
+        </style>
+    </head>
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header" data-position="fixed" data-grid="d" class="ui-content header">
+            <div class="return-icon float-left">
+                <a href="account.html"><img src="/assets/icons/back-arrow.svg" class="return-icon" alt=""></a>
+            </div>
+            <div>
+                <h2>Favorites <a onclick="sendFavList()" class="email float-right">Email</A></h2>
+            </div>
+        </div>
+            <div role="main" class="ui-content">
+                <div data-role="tabs">
+                  <div data-role="navbar">
+                    <ul>
+                      <li class="center-alignment"><a href="#restuarants" class="ui-btn-active">Restuarants</a></li>
+                      <li class="center-alignment"><a href="#dishes">Dishes</a></li>
+                    </ul>
+                  </div>
+                  <div id="restuarants">
+                    <div class="search-tiles dioni-delight">
+                       <div>
+                        <p class="category-name">Dioni's Delight</p>
+                       </div>
+                    </div>
+                    <div class="search-tiles meraki-by-asi">
+                        <p class="category-name">Meraki by Asi</p>
+                    </div>
+                    <div class="search-tiles Foodienator" id="favRes">
+                        <p class="category-name">Foodienator</p>
+                    </div>
+                </div>
+                <div id="dishes">
+                    <div style="padding: 20px 0;">
+                        <a href="honey-pancakes.html">
+                            <div class="display-tiles honey-pancakes" style=" margin: 0px; ">
+                                <div class="food-details-2">
+                                    <p class="food-title">Honey Pancakes</p>
+                                    <p style="margin: 5px 0;">
+                                        <span class="food-price">LKR 550.00</span>
+                                        <span class="food-rating float-right">
+                                            <img class="mini-rating" src="/assets/icons/star-white.svg" alt="">5.0
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+              </div>
+        </div> 
+    </body>
+</html>
